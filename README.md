@@ -7,6 +7,10 @@ Explicit, auditable handoff for multi-agent coding. One shared `AGENTS.md` (rule
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/CodeByAby/agent-handoff?style=social)](https://github.com/CodeByAby/agent-handoff/stargazers)
 
+![Before / After](docs/assets/before-after.png)
+
+![Demo](docs/assets/demo.gif)
+
 ---
 
 ## Before / after
@@ -188,6 +192,8 @@ Same as Quick start. Short form:
 ```text
 templates/AGENTS.md          # clean public rules template
 templates/PROGRESS.md        # empty progress log + format
+docs/assets/before-after.png # README before/after
+docs/assets/demo.gif         # README demo loop
 docs/EXTENDING.md            # add VS Code / Xcode / any agent
 docs/PROTOCOL.md             # read/write contract
 scripts/setup.sh             # macOS/Linux
