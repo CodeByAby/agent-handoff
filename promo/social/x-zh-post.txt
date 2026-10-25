@@ -1,0 +1,7 @@
+我开源了 Agent Handoff：两份 Markdown，让 AI 秒接班。
+
+切工具直接说「继续做刚 xxx」，非常丝滑。一周多摸出来的交接法，现已开源 ✨
+
+https://github.com/CodeByAby/agent-handoff
+
+#AI编程 #开源

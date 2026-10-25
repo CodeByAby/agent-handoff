@@ -1,0 +1,20 @@
+TITLE:
+Agent Handoff: Two Markdown Files So Your AI Picks Up Mid-Task
+
+DESCRIPTION:
+Switching AI coding tools usually means re-explaining the whole project.
+
+Agent Handoff is a simple open-source handoff: AGENTS.md for rules + PROGRESS.md with seven fields (Goal / Decision / Constraint / Failed / Result / Path / Next). Say “continue the xxx task” in the next tool—no extra API key.
+
+Works with Claude, Codex, Cursor, Copilot, WorkBuddy, Google Antigravity.
+
+Repo: https://github.com/CodeByAby/agent-handoff
+
+#AI #OpenSource #AgentHandoff #AICoding
+
+WATCH: https://youtu.be/wvQDVKNfphU
+TYPE: regular public video (not Short)
+
+CHANNEL: Aby的增长笔记
+HANDLE: @AbyGrowth
+URL: https://www.youtube.com/@AbyGrowth
