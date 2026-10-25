@@ -66,6 +66,31 @@ What setup does:
 
 > Never commit your real `PROGRESS.md` history. The repo only ships templates.
 
+## Quick start (after setup)
+
+1. Open any linked agent (Claude Code / Codex / Cursor…).
+2. Paste this once (or rely on the linked `AGENTS.md`):
+
+```text
+Follow ~/.agents/AGENTS.md. After you finish a stage, prepend a seven-field
+handoff to ~/.agents/PROGRESS.md yourself. I should not need to ask you to log progress.
+```
+
+3. Give it a tiny real task, e.g. “Create ~/tmp/agent-handoff-demo/hello.txt with one line, then stop.”
+4. Open `~/.agents/PROGRESS.md` — you should see Goal / Decision / Constraint / Failed / Result / Path / Next at the top.
+5. Switch to another agent and say: **continue the last handoff**.
+
+If step 4 is empty: the agent did not load the rules. Check the adapter table below, or paste the Handoff protocol section from `templates/AGENTS.md` into that tool’s custom instructions.
+
+### Manual install (no script)
+
+```bash
+mkdir -p ~/.agents
+cp templates/AGENTS.md ~/.agents/AGENTS.md
+cp templates/PROGRESS.md ~/.agents/PROGRESS.md
+# then hard-link or paste into each tool (see docs/EXTENDING.md)
+```
+
 ## Built-in adapters (popular tools)
 
 | Tool | How it loads rules | Status in this repo |
@@ -110,7 +135,9 @@ PRs that add adapters are welcome. Prefer hard-links or sync scripts over rewrit
 | Auditable markdown you can diff | Silent context injection you cannot review |
 | Multi-tool + multi-IDE | A replacement for one mega-agent |
 
-## Star-friendly demo flow
+## Demo checklist
+
+Same as Quick start. Short form:
 
 1. `./scripts/setup.sh`
 2. Ask Claude Code to do a tiny task and stop
