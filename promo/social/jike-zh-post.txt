@@ -1,0 +1,17 @@
+我开源了 Agent Handoff：两份 Markdown，让 AI 秒接班。
+
+同时用几个 AI 编程工具，最烦的是每次切换时，就得把项目从头再讲一遍。
+
+做到哪了、之前定了什么、哪些路试过不行、文件放在哪、下一步干啥……每切一次就要口述一次。讲漏一条，它可能就把你早就否掉的方案又捡回来。
+
+我在这事上折腾了一周多，最后落地的方案是用两份 Markdown 做交接：
+⚙️ AGENTS.md 放规则
+📝 PROGRESS.md 放状态（顶部写七项：Goal / Decision / Constraint / Failed / Result / Path / Next）
+
+切工具基本不用再交代背景，直接在新工具里说「继续做刚 xxx 任务」，非常丝滑。下一个工具只读最新三十行左右，从 Path 和 Next 接着干就行。
+
+陆陆续续也跟几个技术朋友聊过，发现大家也被这件事烦过，所以现在我已经整理成 agent-handoff 开源了。Claude / Codex / Cursor / Copilot / WorkBuddy / Google Antigravity 都能用，不用额外配 API Key。你要是也有这个麻烦，可以直接拿去用 ✨
+
+→ https://github.com/CodeByAby/agent-handoff
+
+觉得有用可以点个 star
