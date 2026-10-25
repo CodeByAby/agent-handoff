@@ -17,11 +17,11 @@
 
 - 显示名：Aby的增长笔记
 - 句柄：`@AbyGrowth`（https://www.youtube.com/@AbyGrowth）
-- 频道 Studio：https://studio.youtube.com/channel/UC3Q3B0Mxhs47l7GpyOxWJIgWJIg
+- 频道 Studio：https://studio.youtube.com/channel/UC3Q3B0Mxhs47l7GpyOxWJIg
 
 ## 定稿文案文件
 
-- `x-zh-post-short.txt` — 中文 X 实发
+- `x-zh-post.txt` — 中文 X 实发
 - `jike-zh-post.txt` — 即刻实发
 - `youtube-meta.txt` — YouTube 标题+描述
 - `zh-promo-copy.md` — 多平台底稿（即刻段已有更新前版本；以本目录实发 txt 为准）
