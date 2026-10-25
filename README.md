@@ -5,6 +5,33 @@
 Explicit, auditable handoff for multi-agent coding. One shared `AGENTS.md` (rules) + one shared `PROGRESS.md` (status). No extra API key. No chat-history scraping.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/CodeByAby/agent-handoff?style=social)](https://github.com/CodeByAby/agent-handoff/stargazers)
+
+---
+
+## Before / after
+
+```text
+WITHOUT handoff                          WITH agent-handoff
+─────────────────                        ──────────────────
+"Remind me what we decided…"             Agent reads first 30 lines of PROGRESS.md
+"Where are the files?"                   Path: /Users/you/proj/deck.pptx
+"What failed last time?"                 Failed: tried X; don't retry
+Paste the same brief 5 times             Next agent continues from Next:
+```
+
+Filled example (what lands in `~/.agents/PROGRESS.md`):
+
+```markdown
+## 2026-10-25 10:41｜Codex｜Landing page copy v2
+- Goal: Rewrite hero + FAQ for rumpel site
+- Decision: Keep CTA "Try free"; drop pricing table from hero
+- Constraint: English only; no fake metrics
+- Failed: Long FAQ buried CTA (bounced)
+- Result: hero.md + faq.md updated
+- Path: ~/Sites/rumpel/content/
+- Next: 1) Wire into page 2) Check mobile wrap 3) Ship preview URL
+```
 
 ---
 
@@ -42,6 +69,17 @@ On finish, the agent **must** prepend:
 ```
 
 On start / “continue that thing”, the agent reads **only the first 30 lines**.
+
+
+## Features
+
+| Benefit | How |
+|---|---|
+| Stop re-briefing every tool | Shared `AGENTS.md` + `PROGRESS.md` |
+| Cheap context | Next agent reads **only ~30 lines** |
+| Auditable | Plain markdown you can diff / review |
+| No second bill | Uses your existing Claude / Codex / Cursor / … quota |
+| Works beyond one IDE | Adapters + [EXTENDING.md](docs/EXTENDING.md) |
 
 ## Install (macOS / Linux)
 
@@ -157,9 +195,14 @@ scripts/setup.ps1            # Windows
 LICENSE
 ```
 
+## Contributing
+
+PRs welcome — especially new adapters (see [docs/EXTENDING.md](docs/EXTENDING.md)).
+Open an issue if a tool’s instruction path changed.
+
 ## Topics
 
-`agents` `claude-code` `codex` `cursor` `github-copilot` `vscode` `xcode` `handoff` `ai-coding` `developer-tools`
+`agents` `claude-code` `codex` `cursor` `github-copilot` `handoff` `ai-coding` `developer-tools` `vscode` `antigravity`
 
 ## License
 
